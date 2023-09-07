@@ -32,8 +32,12 @@ function App() {
   };
 
   const deleteTask = (index) => {
-    const updatedTasks = [...tasks];
+    const updatedTasks = tasks;
+    console.log(updatedTasks);
+    console.log(tasks);
+
     updatedTasks.splice(index, 1);
+
     setTasks(updatedTasks);
   };
 
@@ -54,9 +58,6 @@ function App() {
           value={taskText}
           onChange={(e) => setTaskText(e.target.value)}
         />
-        {/* <button onClick={addTask}>
-          <FontAwesomeIcon icon={faPlus} /> Add
-        </button> */}
       </div>
       <input
         type="text"
